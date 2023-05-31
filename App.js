@@ -6,9 +6,9 @@ export default function App() {
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
         <TextInput style={styles.textinputContainer} placeholder="Add what to do!"/>
-        <Button title="Add"/>
+        <Button title="Add Todo"/>
       </View>
-      <View>
+      <View style={styles.goalContainer}>
         <Text>List of to do...</Text>
       </View>
     </View>
@@ -17,17 +17,27 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer: {
-    padding: 50
+    flex: 1,
+    paddingTop: 50,
+    paddingHorizontal: 16
   },
   inputContainer: {
+    flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    alignItems: 'center',
+    paddingBottom: 24,
+    borderBottomWidth: 1,
+    borderBottomColor: "#cccccc",
   },
   textinputContainer: {
     borderWidth: 1,
     borderColor: "#cccccc",
-    width: "80%",
+    width: "70%",
     marginRight: 8,
     padding: 8
+  },
+  goalContainer: {
+    flex: 4
   }
 }); 
